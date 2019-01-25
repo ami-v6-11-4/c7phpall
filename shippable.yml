@@ -12,16 +12,8 @@ runtime:
 build: 
   pre_ci_boot:
     image_name: drydock/c7phpall
-    image_tag: master
+    image_tag: v6.12.4
     pull: true
     
   ci:
    - php --version
-   - docker pull shippabledocker/sample_node_pvt:ecr
-    
-integrations:
-    
-  hub:
- #Docker integration
-    - integrationName: ship-docker
-      type: dockerRegistryLogin
